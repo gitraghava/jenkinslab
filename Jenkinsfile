@@ -1,10 +1,10 @@
-pipeline {
-    agent any
-    stages {
-        stage('Test') {
-            steps {
-                echo 'gradle project..'
-            }
-        }
-    }
+pipeline { 
+     agent any 
+     stages { 
+          stage("Compile") { 
+               steps { 
+                    sh "./gradlew compileJava" 
+               } 
+          } 
+     }
 }
